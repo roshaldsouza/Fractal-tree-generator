@@ -3,7 +3,6 @@
 An interactive **Fractal Tree Generator** built using **React + TypeScript + HTML Canvas**, featuring **recursive tree generation**, **wind sway animation**, **growing draw animation**, and **seasonal color presets**.
 
 🔗 Live Demo: <YOUR_DEPLOYED_LINK_HERE>  
-📦 GitHub Repo: <YOUR_GITHUB_REPO_LINK_HERE>
 
 ---
 

@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# 🌳 Fractal Tree Generator (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive **Fractal Tree Generator** built using **React + TypeScript + HTML Canvas**, featuring **recursive tree generation**, **wind sway animation**, **growing draw animation**, and **seasonal color presets**.
 
-Currently, two official plugins are available:
+🔗 Live Demo: <YOUR_DEPLOYED_LINK_HERE>  
+📦 GitHub Repo: <YOUR_GITHUB_REPO_LINK_HERE>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ **Recursive Fractal Tree Generation** (Depth-based branching)  
+🌬️ **Wind Animation** (branches sway naturally)  
+🌱 **Growing Animation** (tree draws step-by-step)  
+🎨 **Color Presets**: Spring / Autumn / Winter / Neon  
+🎛️ **Real-time Controls** (depth, angle, shrink, thickness, randomness)  
+📥 **Download as PNG** (export your tree)  
+📱 **Responsive UI** (works on laptop + mobile)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧠 How it Works (Core Logic)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project uses **recursion** to draw a tree where each branch splits into two smaller branches:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Each recursive call reduces:
+  - branch length (shrink factor)
+  - thickness
+  - depth (stopping condition)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Canvas rendering makes the visualization fast and smooth.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **HTML Canvas**
+- **Vite**
+- **CSS**
+
+---
+
+## 📸 Snapshots
+
+> Add screenshots here after you run the project.
+
+### 🌿 Spring Preset (Growing Animation)
+![Spring Tree](./screenshots/spring.jpeg)
+
+### 🍂 Autumn Preset (Wind Sway)
+![Autumn Tree](./screenshots/autumn.jpeg)
+
+### ❄️ Winter Preset (Minimal + Clean)
+![Winter Tree](./screenshots/winter.jpeg)
+
+### 💜 Neon Preset (Portfolio Mode)
+![Neon Tree](./screenshots/neon.jpeg)
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+Clone the repo:
+```bash
+git clone <YOUR_GITHUB_REPO_LINK_HERE>
+cd fractal-tree
